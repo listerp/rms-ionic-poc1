@@ -32,6 +32,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+    .state('app.DriverSchedule', {
+      url: '/DriverSchedule',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/DriverSchedule.html'
+        }
+      }
+    })
+
   .state('app.search', {
     url: '/search',
     views: {
