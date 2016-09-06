@@ -44,14 +44,13 @@ angular.module('starter.controllers', [])
     console.log('Doing login', $scope.loginData);
 
     var password = $scope.loginData.password;
-    var loggedIn = false;
 
     if ($scope.loginData.username === '123456' && password === 'password')
     {
-      loggedIn = true;
+      $scope.loginData.isLoggedIn = true;
     }
 
-    if (loggedIn)
+    if ($scope.loginData.isLoggedIn)
       $scope.closeLogin();
     else
       var x = "y";  // TODO: What to do about a failed login?
